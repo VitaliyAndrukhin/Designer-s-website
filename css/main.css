@@ -1,0 +1,547 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.bigred {
+  font-size: 20px;
+  color: red;
+}
+
+/* КОНЕЦ ОБНУЛЯЮЩЕГО СТИЛЯ */
+.about .about-column {
+  width: 160px;
+  height: 3px;
+  background-color: #f15324;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  min-width: 1180px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.header {
+  display: flex;
+  height: 143px;
+  background-color: #f8f6f6;
+}
+.header .header-row {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+.header .header-row .header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header .header-row .header-logo .header-logo-img {
+  margin-left: 25px;
+}
+.header .header-row .header-logo .header-logo-title {
+  margin-left: 20px;
+  font-family: "BigNoodleTitling", bold;
+  font-size: 40px;
+  color: #746868;
+}
+.header .header-row .burger {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin-right: 40px;
+}
+.header .header-row .burger .burger > hr {
+  margin: 2px;
+  background-color: #554948;
+  width: 38px;
+  height: 2px;
+}
+.header .header-row .burger .middle-hr {
+  height: 3px;
+  border-bottom: 0.1px solid #9f9292;
+  border-top: 0.1px solid #9f9292;
+  padding: 1.5px;
+}
+
+.hi {
+  display: flex;
+  width: 100%;
+  height: 710px;
+  background-color: #353535;
+}
+.hi .hi-column {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.hi .hi-column .hi-titles {
+  display: flex;
+  flex-direction: column;
+  color: #fbefee;
+  font-family: "BigNoodleTitling", bold;
+  align-items: center;
+  height: 90%;
+  margin-top: 300px;
+}
+.hi .hi-column .hi-titles .hi-title {
+  font-size: 72px;
+  letter-spacing: 10px;
+}
+.hi .hi-column .hi-titles .hi-subtitle {
+  margin-top: 10px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+.hi .hi-column .hi-tab-btn {
+  color: #9c9c9c;
+  border: 2px solid #9c9c9c;
+  padding: 6px 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.hi .hi-column .hi-tab-btn .hi-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1%;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9c9c9c;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+}
+.hi .hi-column .hi-tab-btn .hi-tab .blink {
+  animation: pulse 3s infinite;
+  /* Параметры анимации */
+}
+@keyframes pulse {
+  from {
+    opacity: 1;
+    /* Непрозрачный текст */
+  }
+  to {
+    opacity: 0;
+    /* Прозрачный текст */
+  }
+}
+.hi .hi-column .hi-tab-btn .hi-tab .pulse {
+  margin: 100px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cca92c;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+}
+.hi .hi-column .hi-tab-btn .hi-tab .pulse:hover {
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+.about {
+  display: flex;
+  height: 568px;
+  width: 100%;
+}
+.about .about-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.about .about-column .about-title {
+  color: #4d4140;
+  font-family: "BigNoodleTitling", bold;
+  font-size: 48px;
+  margin-top: 80px;
+  letter-spacing: 6px;
+}
+.about .about-column .about-subtitle {
+  width: 400px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Roboto";
+}
+.about .about-column .about-items {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.about .about-column .about-items .about-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 200px;
+  background-color: #ebebeb;
+  margin: 11px;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+.about .about-column .about-items .about-item .about-item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  margin-top: 15px;
+}
+.about .about-column .about-items .about-item .about-item-img img {
+  flex-grow: 0 0 auto;
+}
+.about .about-column .about-items .about-item .about-item-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  margin-top: 20px;
+}
+.about .about-column .about-items .about-item .about-item-body .about-item-title {
+  font-family: "Roboto", bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.about .about-column .about-items .about-item .about-item-body .about-item-text {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", thin;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50%;
+  padding: 20px;
+}
+
+.watch-row {
+  display: flex;
+  width: 100%;
+  flex-grow: 1 1 auto;
+  height: 456px;
+}
+.watch-row .watch-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2629;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.watch-row .watch-body .watch-title {
+  font-family: "Roboto", bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #e5d9d9;
+  margin-bottom: 30px;
+}
+.watch-row .watch-body .watch-subtitle {
+  font-family: "Roboto", thin;
+  font-size: 14px;
+  color: #e5d9d9;
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 500px;
+}
+.watch-row .watch-body .watch-subtitle .watch-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 132px;
+  height: 40px;
+  background-color: #e64e40;
+  border: 1px solid #e64e40;
+  border-radius: 7px;
+  color: #e5d9d9;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 3px #b51809;
+}
+.watch-row .watch-body .watch-video {
+  flex: 0 0 684px;
+}
+.watch-row .watch-body .watch-video .watch-video-content {
+  width: 100%;
+  height: 100%;
+}
+.watch-row .watch-body .watch-video .watch-video-content img {
+  max-width: 100%;
+}
+
+.our-works {
+  width: 100%;
+  height: 315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-works-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 100%;
+}
+
+.our-works-title {
+  font-family: "BigNoodleTitling", bold;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #4d4140;
+  margin-top: 60px;
+  letter-spacing: 4px;
+}
+
+.our-works-subtitle {
+  width: 400px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Roboto", thin;
+  font-size: 14px;
+}
+
+.our-works-row hr {
+  width: 160px;
+  height: 3px;
+  background-color: #f15324;
+}
+
+.our-works-map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Roboto Light, light";
+  color: #4d4140;
+  height: 30px;
+}
+
+.our-works-map > div {
+  margin: 0 8px;
+}
+
+.clients {
+  width: 100%;
+  height: 239px;
+  background-color: #1c1c1c;
+}
+
+.clients-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-item {
+  margin: 0 12px;
+  color: #eadedd;
+  font-size: 33px;
+  font-family: "MgOpen Modata";
+  display: flex;
+  align-items: center;
+}
+
+.client1 {
+  background-image: url("../img/client1b.png");
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.client2 {
+  background-image: url("../img/client1b.png");
+  background-position: 13% 50%;
+  background-repeat: no-repeat;
+}
+
+.clients-item img {
+  margin: 10px 0 0 10px;
+}
+
+.img2 {
+  margin-top: 50px;
+}
+
+.client-name2 {
+  margin-left: 10px;
+}
+
+.client2 {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  height: 240px;
+  background-color: #171f23;
+  color: #fbefee;
+  font-family: "BigNoodleTitling", bold;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer-title {
+  margin-bottom: 3px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.footer-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.footer-social-webs {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.footer-social-webs-img {
+  margin: 2px;
+}
+
+.logo {
+  flex: 0 0 29px;
+  margin-bottom: 7px;
+}
+
+/* ШРИФТЫ */
+@font-face {
+  /* название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)  */
+  font-family: "BigNoodleTitling";
+  /* адрес шрифта и тип  */
+  src: url("/fonts/big_noodle_titling.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  /* название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)  */
+  font-family: "Roboto";
+  /* адрес шрифта и тип  */
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  /* название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)  */
+  font-family: "Roboto Light";
+  /* адрес шрифта и тип  */
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  /* название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)  */
+  font-family: "MgOpen Modata";
+  /* адрес шрифта и тип  */
+  src: url("/fonts/MgOpenModataRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* КОНЕЦ ШРИФТОВ */
